@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dalton | Diamond D Pool Services — Palestine TX</title>
+  <meta name="description" content="Meet Dalton, the owner of Diamond D Pool Services. Locally owned pool service in Palestine TX. Honest, reliable, and personal — the East Texas difference.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://diamonddpools.com/about.html">
+  <meta property="og:title" content="About Dalton | Diamond D Pool Services — Palestine TX">
+  <meta property="og:description" content="Meet Dalton, the owner of Diamond D Pool Services. Locally owned pool service in Palestine TX. Honest, reliable, and personal — the East Texas difference.">
+  <meta property="og:image" content="https://diamonddpools.com/og-image.jpg">
+  <meta property="og:url" content="https://diamonddpools.com/about.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Dalton | Diamond D Pool Services — Palestine TX">
+  <meta name="twitter:description" content="Meet Dalton, the owner of Diamond D Pool Services. Locally owned pool service in Palestine TX. Honest, reliable, and personal — the East Texas difference.">
+  <meta name="twitter:image" content="https://diamonddpools.com/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Diamond D Pool Services",
+    "telephone": "+19362307012",
+    "email": "yougotdalton@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palestine",
+      "addressRegion": "TX",
+      "postalCode": "75801",
+      "addressCountry": "US"
+    },
+    "openingHours": ["Mo-Fr 09:00-17:00"],
+    "areaServed": "East Texas",
+    "description": "Professional pool cleaning, maintenance, and repair services in Palestine TX and East Texas.",
+    "priceRange": "$$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── ABOUT PAGE ────────────────────────────────── */
+
+    /* Photo frame with editorial corner marks */
+    .about-photo-frame {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    /* top-left crop mark */
+    .about-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px;
+      width: 32px; height: 32px;
+      border-top: 2px solid var(--teal);
+      border-left: 2px solid var(--teal);
+      pointer-events: none;
+    }
+    /* bottom-right crop mark */
+    .about-photo-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; right: -1px;
+      width: 32px; height: 32px;
+      border-bottom: 2px solid var(--teal);
+      border-right: 2px solid var(--teal);
+      pointer-events: none;
+    }
+    .about-photo-frame svg { color: var(--border-mid); }
+    .about-photo-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--ink-xlight);
+      letter-spacing: 0.04em;
+      padding: 0 24px;
+    }
+    .about-photo-note strong {
+      display: block;
+      color: var(--ink-light);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    /* Pull quote */
+    .about-pull-quote {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      font-style: italic;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 36px;
+      padding-left: 22px;
+      border-left: 2px solid var(--teal);
+    }
+
+    /* Stats */
+    .about-stats {
+      display: flex;
+      gap: 0;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .about-stat {
+      flex: 1;
+      padding-right: 32px;
+      margin-right: 32px;
+      border-right: 1px solid var(--border);
+    }
+    .about-stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+    .about-stat-num {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      line-height: 1;
+      display: block;
+    }
+    .about-stat-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-top: 8px;
+    }
+
+    /* Values — editorial numbered list */
+    .about-values-list {
+      margin-top: 72px;
+      border-top: 1px solid var(--border);
+    }
+    .about-value-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 36px;
+      align-items: start;
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border);
+      transition: padding-left 0.25s ease;
+    }
+    .about-value-item:hover { padding-left: 8px; }
+    .about-value-num {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.4rem;
+      letter-spacing: -0.05em;
+      color: var(--ink-xlight);
+      line-height: 1;
+      padding-top: 3px;
+      transition: color 0.25s;
+    }
+    .about-value-item:hover .about-value-num { color: var(--teal); }
+    .about-value-item h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.025em;
+    }
+    .about-value-item p {
+      font-size: 15px;
+      line-height: 1.72;
+      color: var(--ink-mid);
+    }
+
+    /* Credentials — 3-column grid */
+    .about-creds {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-top: 64px;
+    }
+    .about-cred {
+      background: var(--bg);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: background var(--transition);
+    }
+    .about-cred:hover { background: var(--bg-soft); }
+    .about-cred-icon {
+      width: 32px; height: 32px;
+      color: var(--ink-xlight);
+      flex-shrink: 0;
+      transition: color var(--transition);
+    }
+    .about-cred:hover .about-cred-icon { color: var(--teal); }
+    .about-cred-title {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .about-cred-sub {
+      font-size: 12.5px;
+      color: var(--ink-light);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .about-value-item { grid-template-columns: 48px 1fr; gap: 20px; }
+      .about-value-num { font-size: 1.8rem; }
+      .about-creds { grid-template-columns: 1fr; }
+      .about-stats { flex-direction: column; gap: 24px; }
+      .about-stat { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 24px; margin-right: 0; }
+      .about-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar"></div>
+
+<nav class="nav scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Diamond D Pool Services home">
+        <span class="nav-logo-diamond" aria-hidden="true"></span>
+        <span class="nav-logo-text">
+          <span class="nav-logo-mark">Diamond D</span>
+          <span class="nav-logo-sub">Pool Services</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link" style="color:var(--teal)">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="tel:9362307012" class="nav-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 936-230-7012</a>
+      <button class="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:9362307012" class="nav-phone-mobile"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 936-230-7012</a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="gsap-fade-up">
+      <span class="section-label">The Person Behind the Company</span>
+      <h1>Meet Dalton</h1>
+      <p>Diamond D Pool Services is built on one idea: show up, do great work, treat people right. Not a tagline — how we operate every day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── STORY ── -->
+<section class="section">
+  <div class="container">
+    <div class="about-story">
+
+      <!-- Photo — editorial frame with crop marks -->
+      <div class="gsap-slide-left">
+        <div class="about-photo-frame" role="img" aria-label="Photo of Dalton, owner of Diamond D Pool Services">
+          <svg width="88" height="88" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="about-photo-note">
+            <strong>Add Dalton's photo here</strong>
+            480 × 600 px · natural, on-the-job
+          </div>
+        </div>
+      </div>
+
+      <!-- Story text -->
+      <div class="gsap-slide-right">
+        <span class="section-label">Our Story</span>
+        <h2>Locally Owned.<br><em class="serif-italic">Personally Operated.</em></h2>
+
+        <!-- Pull quote -->
+        <blockquote class="about-pull-quote">
+          "East Texas pool owners deserve fast, honest service — not long wait times or contractors who don't answer their phone."
+        </blockquote>
+
+        <p>We're based right here in Palestine, TX. When you call Diamond D, you get Dalton — not a scheduling system, not a call center. The actual person who will show up at your house and work on your pool.</p>
+        <p class="mt-16">We specialize in residential inground and above-ground pools throughout Palestine and the surrounding East Texas area. Weekly maintenance, equipment breakdowns, water chemistry — we handle it, and we do it right.</p>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">East TX</span>
+            <span class="about-stat-label">Born &amp; Raised</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">500+</span>
+            <span class="about-stat-label">Pools Serviced</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">5 ★</span>
+            <span class="about-stat-label">Customer Rating</span>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="contact.html" class="btn btn-primary">Get a Free Estimate</a>
+          <a href="tel:9362307012" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Dalton Directly
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUES — editorial numbered list ── -->
+<section class="section" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="gsap-fade-up">
+      <span class="section-label">How We Operate</span>
+      <h2>The Diamond D<br><em class="serif-italic">Difference</em></h2>
+    </div>
+
+    <div class="about-values-list gsap-stagger">
+
+      <div class="about-value-item">
+        <div class="about-value-num">01</div>
+        <div>
+          <h3>We Answer the Phone</h3>
+          <p>Call or text during business hours and you'll reach Dalton directly — a real person who can actually help. No voicemail systems, no call centers, no callbacks three days later.</p>
+        </div>
+      </div>
+
+      <div class="about-value-item">
+        <div class="about-value-num">02</div>
+        <div>
+          <h3>Free Estimates, Always</h3>
+          <p>We never charge to come look at a problem and give you a price. No commitment required until you decide to move forward. Every repair and installation estimate is free, period.</p>
+        </div>
+      </div>
+
+      <div class="about-value-item">
+        <div class="about-value-num">03</div>
+        <div>
+          <h3>We Teach, Not Just Do</h3>
+          <p>Our Pool School service is unique to Diamond D — we believe an educated pool owner is a better customer and a safer family. Nobody else in East Texas offers this. Knowledge is part of the service.</p>
+        </div>
+      </div>
+
+      <div class="about-value-item">
+        <div class="about-value-num">04</div>
+        <div>
+          <h3>We Live Here Too</h3>
+          <p>Palestine is our home, not a service territory. We're not a franchise dispatching someone from Dallas — we're your neighbors. We treat every pool like it belongs to someone we know, because it usually does.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CREDENTIALS ── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center gsap-fade-up">
+      <span class="section-label">Credentials</span>
+      <h2>Certified &amp; <em class="serif-italic">Committed</em></h2>
+      <p style="max-width:480px;margin:16px auto 0;font-size:16px;">Professionally trained and continuously updated on pool industry standards. We service all major equipment brands.</p>
+    </div>
+
+    <div class="about-creds gsap-stagger">
+      <div class="about-cred">
+        <svg class="about-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <div class="about-cred-title">Licensed &amp; Insured</div>
+          <div class="about-cred-sub">Palestine, TX — fully covered for all residential pool work in East Texas.</div>
+        </div>
+      </div>
+      <div class="about-cred">
+        <svg class="about-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div>
+          <div class="about-cred-title">5-Star Rated</div>
+          <div class="about-cred-sub">Top-rated on Google and Facebook by verified East Texas pool owners.</div>
+        </div>
+      </div>
+      <div class="about-cred">
+        <svg class="about-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <div>
+          <div class="about-cred-title">Pool School Certified</div>
+          <div class="about-cred-sub">The only pool company in East Texas offering hands-on homeowner education.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <div class="gsap-fade-up">
+      <span class="section-label">Ready to get started?</span>
+      <h2>We'd Love to Take Care<br><em class="serif-italic">of Your Pool</em></h2>
+      <p>Whether you're a new pool owner or just looking for better service — let's talk. Free estimate, same-day response.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Get a Free Estimate</a>
+        <a href="tel:9362307012" class="btn btn-outline">Call 936-230-7012</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">Diamond D</div>
+        <div class="footer-logo-sub">Pool Services</div>
+        <p>Professional pool cleaning, maintenance, and repair for Palestine TX and all of East Texas.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100089122808095" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Diamond D on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#weekly">Weekly Maintenance</a></li>
+          <li><a href="services.html#repair">Equipment Repair</a></li>
+          <li><a href="services.html#chemicals">Water Testing</a></li>
+          <li><a href="services.html#school">Pool School</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Dalton</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Diamond D Pool Services — Palestine, TX · <a href="tel:9362307012" style="color:inherit">936-230-7012</a></div>
+      <div class="footer-cert"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured · Free Estimates</div>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:9362307012" class="float-call" aria-label="Call Diamond D Pool Services"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
