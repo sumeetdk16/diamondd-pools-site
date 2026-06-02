@@ -1,5 +1,5 @@
 /* ============================================================
-   Diamond D Pool Services — Main JS
+   Demo Pool Co. — Main JS
    GSAP + ScrollTrigger animations
    ============================================================ */
 
