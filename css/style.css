@@ -142,8 +142,8 @@ p { color: var(--ink-mid); line-height: 1.8; }
   white-space: nowrap;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(15,15,14,0.12); }
-.btn:active { transform: translateY(0); box-shadow: none; }
+.btn:hover  { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(15,15,14,0.12); }
+.btn:active { transform: translateY(1px) scale(0.97); box-shadow: none; transition-duration: 0.08s; }
 
 .btn-primary {
   background: var(--ink);
@@ -395,11 +395,8 @@ p { color: var(--ink-mid); line-height: 1.8; }
   white-space: nowrap;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.nav-cta:hover {
-  background: var(--teal);
-  color: white;
-  transform: translateY(-1px);
-}
+.nav-cta:hover  { background: var(--teal); color: white; transform: translateY(-1px); }
+.nav-cta:active { transform: scale(0.96); transition-duration: 0.08s; }
 .nav.scrolled .nav-cta {
   background: var(--ink);
   color: white;
@@ -484,15 +481,16 @@ p { color: var(--ink-mid); line-height: 1.8; }
   font-size: 15px;
   font-weight: 600;
   color: var(--ink-mid);
-  padding: 13px 16px;
+  padding: 0 16px;
+  min-height: 48px; /* Apple HIG: 44pt minimum; 48px adds safe margin */
+  display: flex;
+  align-items: center;
   border-radius: 6px;
   letter-spacing: 0.02em;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s, transform 0.1s;
 }
-.nav-mobile a:hover {
-  color: var(--ink);
-  background: var(--bg-soft);
-}
+.nav-mobile a:hover  { color: var(--ink); background: var(--bg-soft); }
+.nav-mobile a:active { transform: scale(0.97); transition-duration: 0.08s; }
 
 /* Divider before phone */
 .nav-mobile .nav-mobile-divider {
@@ -510,14 +508,13 @@ p { color: var(--ink-mid); line-height: 1.8; }
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--ink-light);
-  padding: 13px 16px;
+  padding: 0 16px;
+  min-height: 48px;
   border-radius: 6px;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s, transform 0.1s;
 }
-.nav-mobile .nav-phone-mobile:hover {
-  color: var(--ink);
-  background: var(--bg-soft);
-}
+.nav-mobile .nav-phone-mobile:hover  { color: var(--ink); background: var(--bg-soft); }
+.nav-mobile .nav-phone-mobile:active { transform: scale(0.97); transition-duration: 0.08s; }
 
 /* Mobile CTA */
 .nav-mobile .nav-mobile-cta {
@@ -532,12 +529,14 @@ p { color: var(--ink-mid); line-height: 1.8; }
   text-transform: uppercase;
   color: white;
   background: var(--ink);
-  padding: 14px 20px;
+  padding: 0 20px;
+  min-height: 52px;
   border-radius: 6px;
   margin-top: 8px;
   transition: background 0.2s;
 }
-.nav-mobile .nav-mobile-cta:hover { background: var(--teal); }
+.nav-mobile .nav-mobile-cta:hover  { background: var(--teal); }
+.nav-mobile .nav-mobile-cta:active { transform: scale(0.97); transition-duration: 0.08s; }
 
 /* ── FLOAT CALL (mobile) ──────────────────────────────────── */
 .float-call {
@@ -545,16 +544,18 @@ p { color: var(--ink-mid); line-height: 1.8; }
   position: fixed;
   bottom: 24px; right: 24px;
   z-index: 900;
-  background: var(--ink);
+  background: var(--teal);
   color: white;
-  width: 54px; height: 54px;
+  width: 56px; height: 56px;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   font-size: 0;
-  transition: background var(--transition), transform var(--transition);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 16px rgba(15,168,181,0.38), 0 2px 6px rgba(0,0,0,0.12);
 }
-.float-call:hover { background: var(--bg-dark); transform: scale(1.06); }
+.float-call:hover  { background: var(--teal-dark); transform: scale(1.07); box-shadow: 0 6px 24px rgba(15,168,181,0.45), 0 2px 8px rgba(0,0,0,0.15); }
+.float-call:active { transform: scale(0.93); transition-duration: 0.08s; box-shadow: 0 2px 8px rgba(15,168,181,0.3); }
 .float-call svg { width: 22px; height: 22px; stroke: white; }
 
 /* ── TRUST BAR ────────────────────────────────────────────── */
@@ -579,7 +580,12 @@ p { color: var(--ink-mid); line-height: 1.8; }
   align-items: center;
   gap: 14px;
   color: var(--ink);
+  transition: opacity 0.22s ease;
 }
+.trust-bar-inner:hover .trust-item          { opacity: 0.5; }
+.trust-bar-inner:hover .trust-item:hover    { opacity: 1; }
+.trust-bar-inner:hover .trust-item:hover .trust-item-icon { opacity: 1; }
+.trust-bar-inner:hover .trust-item:hover .trust-item-title { color: var(--ink); }
 
 .trust-item-icon {
   font-size: 0; line-height: 0;
@@ -725,7 +731,7 @@ p { color: var(--ink-mid); line-height: 1.8; }
   gap: 7px;
   font-size: 10px;
   font-weight: 700;
-  color: var(--ink-xlight);
+  color: var(--ink-light); /* was ink-xlight — failed WCAG AA (2.7:1); ink-light = 5.3:1 ✓ */
   margin-top: 24px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1180,22 +1186,6 @@ footer::after {
   background: linear-gradient(to right, transparent, rgba(15,168,181,0.3), transparent);
 }
 
-/* Large faded wordmark watermark — premium editorial technique */
-footer::before {
-  content: 'Diamond D';
-  position: absolute;
-  bottom: -20px;
-  right: -8px;
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(5rem, 14vw, 11rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: rgba(255,255,255,0.022);
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-}
 
 .footer-inner {
   display: grid;
@@ -1689,9 +1679,6 @@ footer::before {
   /* CTA section: reduce heavy padding on mobile */
   .cta-section { padding: 96px 0; }
 
-  /* Footer: hide giant watermark on mobile — too distracting */
-  footer::before { display: none; }
-
   /* Footer social: keep 44px but show inline */
   .footer-social { gap: 8px; }
 
@@ -1754,14 +1741,14 @@ body { letter-spacing: 0.0015em; }
 /* Footer column headings: slightly more refined */
 .footer-col h4 { letter-spacing: 0.2em; }
 
-/* Float call button: more refined */
+/* Float call button: teal brand color with glow */
 .float-call {
-  background: var(--ink);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.2);
+  background: var(--teal);
+  box-shadow: 0 4px 16px rgba(15,168,181,0.38), 0 2px 6px rgba(0,0,0,0.12);
 }
 .float-call:hover {
-  background: var(--teal);
-  box-shadow: 0 6px 28px rgba(15,168,181,0.4);
+  background: var(--teal-dark);
+  box-shadow: 0 6px 24px rgba(15,168,181,0.45), 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Nav CTA: refined on scrolled state */

@@ -256,7 +256,8 @@ function initForm() {
 
     // Loading state
     btn.disabled = true;
-    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 0.8s linear infinite;margin-right:8px"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/></svg> Sending…';
+    btn.style.cssText += 'display:flex;align-items:center;justify-content:center;gap:8px;opacity:0.75;';
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 0.7s linear infinite;flex-shrink:0" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-opacity="0.2"/><path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/></svg> Sending…';
 
     // Add spin keyframes if not present
     if (!document.getElementById('spin-style')) {
@@ -268,7 +269,8 @@ function initForm() {
 
     // Replace with Netlify Forms / Formspree in production
     setTimeout(() => {
-      btn.innerHTML = '✓ Sent! Dalton will call you soon.';
+      btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sent! We\'ll call you soon.';
+      btn.style.cssText += 'display:flex;align-items:center;justify-content:center;gap:8px;';
       btn.style.background = 'var(--teal)';
       btn.style.borderColor = 'var(--teal)';
       form.reset();

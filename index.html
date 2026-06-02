@@ -29,8 +29,10 @@
       position: relative;
       height: 560vh;
     }
-    @media (max-width: 1024px) { .hero-scroll-wrap { height: 420vh; } }
-    @media (max-width: 768px)  { .hero-scroll-wrap { height: 320vh; } }
+    /* Tablet: still video play-through, give ample hold time */
+    @media (max-width: 1024px) { .hero-scroll-wrap { height: 380vh; } }
+    /* Phone: 220vh — video plays on its own (~8s), remainder holds at finale */
+    @media (max-width: 768px)  { .hero-scroll-wrap { height: 220vh; } }
 
     .hero-scroll-sticky {
       position: sticky;
@@ -49,13 +51,23 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      object-position: center center;
+      /* Landscape 16:9 video on portrait screen:
+         cover scales so the height fills the viewport;
+         object-position focuses the crop slightly above-center
+         so the pool deck/coping and water read clearly. */
+      object-position: center 38%;
+      will-change: transform;
     }
 
-    /* Swap canvas → video at the mobile breakpoint */
-    @media (max-width: 768px) {
+    /* Show video on mobile and tablet — hide canvas */
+    @media (max-width: 1024px) {
       #heroCanvas { display: none; }
       #heroVideo  { display: block; }
+    }
+
+    /* Very small phones: nudge crop up a little more */
+    @media (max-width: 430px) {
+      #heroVideo { object-position: center 32%; }
     }
 
     /* Vignette — dark edges, breathable center */
@@ -89,11 +101,11 @@
 
     .hero-eyebrow {
       font-family: 'Epilogue', sans-serif;
-      font-size: 0.65rem;
+      font-size: 0.63rem;
       font-weight: 700;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.30em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(15,168,181,0.75);
       margin-bottom: 32px;
       display: flex;
       align-items: center;
@@ -103,9 +115,9 @@
     .hero-eyebrow::after {
       content: '';
       display: block;
-      width: 32px;
+      width: 28px;
       height: 1px;
-      background: rgba(255,255,255,0.25);
+      background: rgba(15,168,181,0.4);
     }
 
     .hero-display {
@@ -115,13 +127,44 @@
       line-height: 0.95;
       letter-spacing: -0.03em;
       color: #fff;
-      text-shadow: 0 4px 48px rgba(0,0,0,0.5);
+      text-shadow: 0 2px 32px rgba(0,0,0,0.6), 0 8px 64px rgba(0,0,0,0.35);
       margin-bottom: 40px;
     }
     .hero-display em {
       font-style: italic;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.60);
     }
+
+    /* ── Skip intro — disappears on scroll ── */
+    .hero-skip {
+      position: absolute;
+      bottom: 36px;
+      right: 32px;
+      z-index: 15;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 14px;
+      border-radius: 2px;
+      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+      will-change: opacity;
+      cursor: pointer;
+      background: rgba(0,0,0,0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .hero-skip:hover  { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.3); background: rgba(0,0,0,0.25); }
+    .hero-skip:active { transform: scale(0.95); transition-duration: 0.08s; }
+    .hero-skip svg { width: 10px; height: 10px; }
+    @media (max-width: 640px) { .hero-skip { display: none; } }
 
     .hero-scroll-cue {
       display: flex;
@@ -241,14 +284,22 @@
       padding: 16px 36px;
       border-radius: 2px;
       text-decoration: none;
-      transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s;
-      box-shadow: 0 0 0 0 rgba(15,168,181,0.4);
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+      box-shadow: 0 2px 12px rgba(15,168,181,0.3);
+      transform: translateY(0) scale(1);
     }
     .finale-btn-primary:hover {
       background: transparent;
       border-color: #0fa8b5;
       color: #fff;
-      box-shadow: 0 0 0 3px rgba(15,168,181,0.25), 0 4px 24px rgba(15,168,181,0.35);
+      box-shadow: 0 0 0 3px rgba(15,168,181,0.2), 0 6px 28px rgba(15,168,181,0.4);
+      transform: translateY(-2px) scale(1);
+    }
+    .finale-btn-primary:active {
+      transform: translateY(1px) scale(0.97);
+      box-shadow: none;
+      transition-duration: 0.08s;
     }
 
     .finale-btn-ghost {
@@ -262,17 +313,24 @@
       padding: 16px 28px;
       border-radius: 2px;
       text-decoration: none;
-      transition: color 0.22s, border-color 0.22s, background 0.22s;
+      cursor: pointer;
+      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+      transform: translateY(0) scale(1);
     }
     .finale-btn-ghost:hover {
       color: #fff;
       border-color: rgba(255,255,255,0.6);
       background: rgba(255,255,255,0.06);
+      transform: translateY(-2px) scale(1);
+    }
+    .finale-btn-ghost:active {
+      transform: translateY(1px) scale(0.97);
+      transition-duration: 0.08s;
     }
 
-    /* ── Very small phones: shorter scroll so the finale arrives sooner ── */
+    /* ── Very small phones: less hold room needed ── */
     @media (max-width: 480px) {
-      .hero-scroll-wrap { height: 280vh; }
+      .hero-scroll-wrap { height: 190vh; }
     }
 
     @media (max-width: 640px) {
@@ -453,6 +511,14 @@
       <span>Scroll to see the transformation</span>
       <div class="cue-line"></div>
     </div>
+
+    <!-- Skip intro — jumps past the animation to services -->
+    <a href="#services" class="hero-skip" id="heroSkip" aria-label="Skip intro animation">
+      Skip
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="2,3 5,6 8,3"/>
+      </svg>
+    </a>
 
     <!-- Finale reveal — appears when pool is clean -->
     <div id="heroFinale" aria-live="polite">
@@ -1045,7 +1111,7 @@
 
   /* ── Mobile video ───────────────────────────────────────── */
   var heroVideo = document.getElementById('heroVideo');
-  var mql       = window.matchMedia('(max-width: 768px)');
+  var mql       = window.matchMedia('(max-width: 1024px)');
   function isMobile() { return mql.matches; }
   if (heroVideo && isMobile()) { heroVideo.load(); }
 
@@ -1053,61 +1119,117 @@
   var wrap        = document.querySelector('.hero-scroll-wrap');
   var overlay     = document.getElementById('heroOverlay');
   var hint        = document.getElementById('heroHint');
+  var skip        = document.getElementById('heroSkip');
   var finale      = document.getElementById('heroFinale');
   var finaleShown = false;
 
-  var targetP = 0;   /* raw scroll progress [0, 1] updated on scroll */
-  var smoothP = 0;   /* lerped progress — drives all visuals          */
+  /* Skip intro — instant-scroll past the hero */
+  if (skip) {
+    skip.addEventListener('click', function (e) {
+      e.preventDefault();
+      var servicesEl = document.getElementById('services');
+      if (servicesEl) {
+        var navH = document.querySelector('.nav') ? document.querySelector('.nav').offsetHeight : 0;
+        var top  = servicesEl.getBoundingClientRect().top + window.pageYOffset - navH;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  }
 
-  /* ── Scroll handler — only reads scroll position ─────────── */
+  /* ── Mobile: play-through (not scroll-scrubbed) ──────────── */
+  if (isMobile() && heroVideo) {
+    var mobileStarted = false;
+
+    function startMobileVideo() {
+      if (mobileStarted) return;
+      mobileStarted = true;
+      heroVideo.play().catch(function () {});
+    }
+
+    /* Fade overlay / hint / skip smoothly once video begins */
+    heroVideo.addEventListener('play', function () {
+      var t0 = null;
+      var DUR_OVERLAY = 1400; /* ms */
+      var DUR_HINT    =  600;
+      function fadeOut(ts) {
+        if (!t0) t0 = ts;
+        var elapsed = ts - t0;
+        if (overlay) overlay.style.opacity = Math.max(0, 1 - elapsed / DUR_OVERLAY).toFixed(3);
+        if (hint)    hint.style.opacity    = Math.max(0, 1 - elapsed / DUR_HINT).toFixed(3);
+        if (skip)    skip.style.opacity    = Math.max(0, 1 - elapsed / DUR_HINT).toFixed(3);
+        if (elapsed < DUR_OVERLAY) requestAnimationFrame(fadeOut);
+      }
+      requestAnimationFrame(fadeOut);
+    });
+
+    /* Reveal finale when video reaches its end — then hold */
+    heroVideo.addEventListener('ended', function () {
+      if (!finaleShown) {
+        finaleShown = true;
+        finale.style.opacity = '1';
+        requestAnimationFrame(function () { finale.classList.add('active'); });
+      }
+    });
+
+    /* Start playing as soon as the user scrolls into the hero zone */
+    function onMobileScroll() {
+      var rect  = wrap.getBoundingClientRect();
+      var total = wrap.offsetHeight - window.innerHeight;
+      var p     = Math.min(1, Math.max(0, -rect.top / total));
+      if (p > 0.01) {
+        startMobileVideo();
+        window.removeEventListener('scroll', onMobileScroll);
+      }
+    }
+    window.addEventListener('scroll', onMobileScroll, { passive: true });
+  }
+
+  var targetP = 0;
+  var smoothP = 0;
+
+  /* ── Scroll handler ──────────────────────────────────────── */
   function onScroll() {
     var rect  = wrap.getBoundingClientRect();
     var total = wrap.offsetHeight - window.innerHeight;
     targetP   = Math.min(1, Math.max(0, -rect.top / total));
   }
 
-  /* ── rAF loop — lerps smoothP toward targetP every frame ─── */
+  /* ── rAF loop — desktop canvas only; mobile uses video events */
   function tick() {
     var diff = targetP - smoothP;
 
     if (Math.abs(diff) > 0.00015) {
       smoothP += diff * LERP;
 
-      /* filmP: 0→1 mapped over the first FILM_END of scroll,
-         clamped at 1 so frames freeze once the animation is done */
-      var filmP = Math.min(1, smoothP / FILM_END);
-
       if (!isMobile()) {
-        var idx = Math.min(FRAMES - 1, Math.floor(filmP * FRAMES));
+        /* ── Desktop: scroll-driven canvas frames ── */
+        var filmP = Math.min(1, smoothP / FILM_END);
+        var idx   = Math.min(FRAMES - 1, Math.floor(filmP * FRAMES));
         if (idx !== curFrame) { curFrame = idx; drawFrame(idx); }
-      } else if (heroVideo && heroVideo.readyState >= 2) {
-        /* Threshold to avoid hammering video.currentTime */
-        var t = filmP * heroVideo.duration;
-        if (Math.abs(heroVideo.currentTime - t) > 0.04) {
-          heroVideo.currentTime = t;
-        }
-      }
 
-      /* Overlay fades (keyed to raw smoothP, not filmP) */
-      if (overlay) overlay.style.opacity = Math.max(0, 1 - smoothP / 0.14).toFixed(3);
-      if (hint)    hint.style.opacity    = Math.max(0, 1 - smoothP / 0.08).toFixed(3);
+        /* Desktop: scroll-driven overlay / hint / skip fades */
+        if (overlay) overlay.style.opacity = Math.max(0, 1 - smoothP / 0.14).toFixed(3);
+        if (hint)    hint.style.opacity    = Math.max(0, 1 - smoothP / 0.08).toFixed(3);
+        if (skip)    skip.style.opacity    = Math.max(0, 1 - smoothP / 0.10).toFixed(3);
 
-      /* Finale: reveal once film completes; hold through rest of scroll */
-      if (finale) {
-        if (smoothP >= FILM_END) {
-          if (!finaleShown) {
-            finaleShown = true;
-            finale.style.opacity = '1';
-            requestAnimationFrame(function () { finale.classList.add('active'); });
-          }
-        } else {
-          if (finaleShown) {
-            finaleShown = false;
-            finale.classList.remove('active');
-            finale.style.opacity = '0';
+        /* Desktop: scroll-driven finale reveal */
+        if (finale) {
+          if (smoothP >= FILM_END) {
+            if (!finaleShown) {
+              finaleShown = true;
+              finale.style.opacity = '1';
+              requestAnimationFrame(function () { finale.classList.add('active'); });
+            }
+          } else {
+            if (finaleShown) {
+              finaleShown = false;
+              finale.classList.remove('active');
+              finale.style.opacity = '0';
+            }
           }
         }
       }
+      /* Mobile: video plays on its own — overlay & finale handled by video events above */
     }
 
     requestAnimationFrame(tick);
