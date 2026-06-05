@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Pool Co. | Austin TX Pool Cleaning</title>
-  <meta name="description" content="Austin's trusted pool expert. Weekly maintenance, equipment repair, chemical balancing & Pool School for Central Texas homeowners. Free estimate — 555-000-0000.">
+  <title>Diamond D Pool Services | Jacksonville &amp; Palestine TX</title>
+  <meta name="description" content="East Texas pool cleaning, maintenance, and repair. Weekly service, equipment repair, and Pool School for Jacksonville, Palestine, and Henderson TX homeowners. Free estimate: 555-000-0000.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://diamonddpools.com/">
-  <meta property="og:title" content="Demo Pool Co. | Austin TX Pool Cleaning">
-  <meta property="og:description" content="Austin's trusted pool expert. Weekly maintenance, equipment repair, chemical balancing & Pool School for Central Texas homeowners. Free estimate — 555-000-0000.">
+  <meta property="og:title" content="Diamond D Pool Services | Jacksonville &amp; Palestine TX">
+  <meta property="og:description" content="East Texas pool cleaning, maintenance, and repair. Weekly service, equipment repair, and Pool School for Jacksonville, Palestine, and Henderson TX homeowners. Free estimate: 555-000-0000.">
   <meta property="og:image" content="https://diamonddpools.com/og-image.jpg">
   <meta property="og:url" content="https://diamonddpools.com/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Demo Pool Co. | Austin TX Pool Cleaning">
-  <meta name="twitter:description" content="Austin's trusted pool expert. Weekly maintenance, equipment repair, chemical balancing & Pool School for Central Texas homeowners. Free estimate — 555-000-0000.">
+  <meta name="twitter:title" content="Diamond D Pool Services | Jacksonville &amp; Palestine TX">
+  <meta name="twitter:description" content="East Texas pool cleaning, maintenance, and repair. Weekly service, equipment repair, and Pool School for Jacksonville, Palestine, and Henderson TX homeowners. Free estimate: 555-000-0000.">
   <meta name="twitter:image" content="https://diamonddpools.com/og-image.jpg">
   <meta name="geo.region" content="US-TX">
-  <meta name="geo.placename" content="Austin, TX">
+  <meta name="geo.placename" content="Jacksonville, TX">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
       height: 100vh;
       width: 100%;
       overflow: hidden;
-      background: #060e18;
+      background: #040e05;
     }
 
     #heroCanvas { position: absolute; top: 0; left: 0; display: block; }
@@ -70,19 +70,19 @@
       #heroVideo { object-position: center 32%; }
     }
 
-    /* Vignette — dark edges, breathable center */
+    /* Vignette — Midnight Pines-tinted edges, breathable center */
     .hero-canvas-vignette {
       position: absolute;
       inset: 0;
       pointer-events: none;
       z-index: 5;
       background:
-        linear-gradient(to top,    rgba(4,10,20,0.88) 0%,   transparent 38%),
-        linear-gradient(to bottom, rgba(4,10,20,0.45) 0%,   transparent 20%),
+        linear-gradient(to top,    rgba(4,8,3,0.92) 0%,   transparent 38%),
+        linear-gradient(to bottom, rgba(4,8,3,0.50) 0%,   transparent 22%),
         radial-gradient(ellipse at center,
-          rgba(4,10,20,0.0)  0%,
-          rgba(4,10,20,0.18) 50%,
-          rgba(4,10,20,0.52) 100%);
+          rgba(4,8,3,0.0)  0%,
+          rgba(4,8,3,0.16) 50%,
+          rgba(4,8,3,0.54) 100%);
     }
 
     /* ── INITIAL HERO OVERLAY ─── centered, full-screen ── */
@@ -105,7 +105,7 @@
       font-weight: 700;
       letter-spacing: 0.30em;
       text-transform: uppercase;
-      color: rgba(15,168,181,0.75);
+      color: rgba(171,181,182,0.90);
       margin-bottom: 32px;
       display: flex;
       align-items: center;
@@ -117,7 +117,7 @@
       display: block;
       width: 28px;
       height: 1px;
-      background: rgba(15,168,181,0.4);
+      background: rgba(171,181,182,0.48);
     }
 
     .hero-display {
@@ -154,7 +154,7 @@
       border: 1px solid rgba(255,255,255,0.1);
       padding: 8px 14px;
       border-radius: 2px;
-      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.22,1,0.36,1);
       will-change: opacity;
       cursor: pointer;
       background: rgba(0,0,0,0.15);
@@ -188,7 +188,7 @@
     .cue-line {
       width: 1px;
       height: 44px;
-      background: linear-gradient(to bottom, rgba(15,168,181,0.7), transparent);
+      background: linear-gradient(to bottom, rgba(171,181,182,0.80), transparent);
       animation: cueFloat 2.2s ease-in-out infinite;
     }
     @keyframes cueFloat {
@@ -213,12 +213,14 @@
     #heroFinale.active { pointer-events: auto; }
 
     .finale-rule {
-      width: 0;
+      width: 120px;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(15,168,181,0.7), transparent);
-      transition: width 0.9s cubic-bezier(0.4,0,0.2,1) 0.1s;
+      background: linear-gradient(to right, transparent, rgba(171,181,182,0.72), transparent);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.9s cubic-bezier(0.4,0,0.2,1) 0.1s;
     }
-    #heroFinale.active .finale-rule { width: 120px; }
+    #heroFinale.active .finale-rule { transform: scaleX(1); }
 
     .finale-tagline {
       font-family: 'Epilogue', sans-serif;
@@ -226,12 +228,12 @@
       font-weight: 700;
       letter-spacing: 0.32em;
       text-transform: uppercase;
-      color: #0fa8b5;
+      color: #ABB5B6;
       margin: 24px 0 20px;
       opacity: 0;
       transform: translateY(6px);
       transition: opacity 0.7s ease 0.5s, transform 0.7s ease 0.5s;
-      text-shadow: 0 0 24px rgba(15,168,181,0.5);
+      text-shadow: 0 0 24px rgba(171,181,182,0.50);
     }
     #heroFinale.active .finale-tagline { opacity: 1; transform: translateY(0); }
 
@@ -252,13 +254,15 @@
     #heroFinale.active .finale-text { opacity: 1; transform: translateY(0); }
 
     .finale-rule-bottom {
-      width: 0;
+      width: 80px;
       height: 1px;
       background: rgba(255,255,255,0.12);
-      transition: width 0.9s cubic-bezier(0.4,0,0.2,1) 0.7s;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.9s cubic-bezier(0.4,0,0.2,1) 0.7s;
       margin-bottom: 40px;
     }
-    #heroFinale.active .finale-rule-bottom { width: 80px; }
+    #heroFinale.active .finale-rule-bottom { transform: scaleX(1); }
 
     .finale-actions {
       display: flex;
@@ -279,21 +283,21 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #fff;
-      background: #0fa8b5;
-      border: 1px solid #0fa8b5;
+      background: #14240C;
+      border: 1px solid #14240C;
       padding: 16px 36px;
       border-radius: 2px;
       text-decoration: none;
       cursor: pointer;
-      transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
-      box-shadow: 0 2px 12px rgba(15,168,181,0.3);
+      transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s, transform 0.18s cubic-bezier(0.22,1,0.36,1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
       transform: translateY(0) scale(1);
     }
     .finale-btn-primary:hover {
-      background: transparent;
-      border-color: #0fa8b5;
+      background: #334D14;
+      border-color: #334D14;
       color: #fff;
-      box-shadow: 0 0 0 3px rgba(15,168,181,0.2), 0 6px 28px rgba(15,168,181,0.4);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
       transform: translateY(-2px) scale(1);
     }
     .finale-btn-primary:active {
@@ -314,7 +318,7 @@
       border-radius: 2px;
       text-decoration: none;
       cursor: pointer;
-      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+      transition: color 0.22s, border-color 0.22s, background 0.22s, transform 0.18s cubic-bezier(0.22,1,0.36,1);
       transform: translateY(0) scale(1);
     }
     .finale-btn-ghost:hover {
@@ -371,8 +375,8 @@
       }
 
       /* Shorter decorative rules on mobile */
-      #heroFinale.active .finale-rule,
-      #heroFinale.active .finale-rule-bottom { width: 56px; }
+      .finale-rule,
+      .finale-rule-bottom { width: 56px; }
 
       /* Finale buttons: full-width stack, generous tap targets */
       .finale-actions {
@@ -402,19 +406,19 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Demo Pool Co.",
+    "name": "Diamond D Pool Services",
     "telephone": "+15550000000",
     "email": "demo@example.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Austin",
+      "addressLocality": "Jacksonville",
       "addressRegion": "TX",
-      "postalCode": "78701",
+      "postalCode": "75766",
       "addressCountry": "US"
     },
     "openingHours": ["Mo-Fr 09:00-17:00"],
-    "areaServed": "Central Texas",
-    "description": "Professional pool cleaning, maintenance, and repair services in Austin TX and Central Texas.",
+    "areaServed": "East Texas",
+    "description": "Professional pool cleaning, maintenance, and repair services in Jacksonville, Palestine, and East Texas.",
     "priceRange": "$$"
   }
   </script>
@@ -432,15 +436,19 @@
   <div class="container">
     <div class="nav-inner">
 
-      <a href="index.html" class="nav-logo" aria-label="Demo Pool Co. home">
+      <a href="index.html" class="nav-logo" aria-label="Diamond D Pool Services home">
         <svg class="nav-logo-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="14" cy="14" r="13" fill="rgba(26,184,198,0.15)" stroke="rgba(26,184,198,0.4)" stroke-width="1"/>
-          <path d="M7 16c1.5-3 3-5 7-5s5.5 2 7 5c-1.5 2.5-3.5 4-7 4s-5.5-1.5-7-4z" fill="#0fa8b5" opacity="0.9"/>
-          <path d="M9 13.5c1-2 2.5-3.5 5-3.5s4 1.5 5 3.5" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-linecap="round" fill="none"/>
+          <!-- Diamond outer — subtle Eastern Breeze -->
+          <polygon points="14,1.5 26.5,14 14,26.5 1.5,14" fill="rgba(218,223,229,0.15)" stroke="rgba(171,181,182,0.40)" stroke-width="0.8"/>
+          <!-- Diamond inner — Midnight Pines -->
+          <polygon points="14,5 23,14 14,23 5,14" fill="#14240C" opacity="0.92"/>
+          <!-- Pine/water mark — Nautical Star on dark bg -->
+          <path d="M8.5 16.5 Q11 11.5 14 10 Q17 11.5 19.5 16.5" stroke="#ABB5B6" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+          <path d="M8.5 18.5 Q11 16.5 14 18.5 Q17 16.5 19.5 18.5" stroke="#728277" stroke-width="1" stroke-linecap="round" fill="none"/>
         </svg>
         <span class="nav-logo-text">
-          <span class="nav-logo-mark">Demo Pool Co.</span>
-          <span class="nav-logo-sub">Pool Services</span>
+          <span class="nav-logo-mark">Diamond D Pools</span>
+          <span class="nav-logo-sub">East Texas</span>
         </span>
       </a>
 
@@ -452,7 +460,7 @@
       </div>
 
       <div class="nav-actions">
-        <a href="tel:5550000000" class="nav-phone" aria-label="Call Demo Pool Co.">
+        <a href="tel:5550000000" class="nav-phone" aria-label="Call Diamond D Pool Services">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           555-000-0000
         </a>
@@ -502,8 +510,8 @@
 
     <!-- Initial hero text — centered, fades as scroll begins -->
     <div class="hero-text-overlay" id="heroOverlay">
-      <div class="hero-eyebrow">Central Texas Pool Experts</div>
-      <h1 class="hero-display">Austin's<br><em>Trusted</em><br>Pool Expert.</h1>
+      <div class="hero-eyebrow">East Texas Pool Experts</div>
+      <h1 class="hero-display">Jacksonville's<br><em>Trusted</em><br>Pool Expert.</h1>
     </div>
 
     <!-- Scroll cue — independent, fades faster -->
@@ -523,7 +531,7 @@
     <!-- Finale reveal — appears when pool is clean -->
     <div id="heroFinale" aria-live="polite">
       <div class="finale-rule"></div>
-      <p class="finale-tagline">Demo Pool Co.</p>
+      <p class="finale-tagline">Diamond D Pool Services</p>
       <p class="finale-text">This could be your pool.</p>
       <div class="finale-rule-bottom"></div>
       <div class="finale-actions">
@@ -543,7 +551,7 @@
         <span class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <div class="trust-item-text">
           <div class="trust-item-title">Locally Owned</div>
-          <div class="trust-item-sub">Austin, TX — not a franchise</div>
+          <div class="trust-item-sub">Jacksonville, TX. Not a franchise.</div>
         </div>
       </div>
       <div class="trust-divider" aria-hidden="true"></div>
@@ -578,22 +586,21 @@
 <section class="section" id="services" aria-label="Services">
   <div class="container">
     <div class="text-center gsap-fade-up">
-      <span class="section-label">What We Do</span>
       <h2>Everything Your Pool Needs,<br><em class="serif-italic">Nothing It Doesn't</em></h2>
-      <p class="mt-16" style="max-width:540px;margin-left:auto;margin-right:auto;font-size:17px">From weekly maintenance to full equipment repairs — we handle it all. Central Texas pools, above-ground and inground.</p>
+      <p class="mt-16" style="max-width:540px;margin-left:auto;margin-right:auto;font-size:17px">From weekly maintenance to full equipment repairs. We handle it all: East Texas pools, above-ground and inground.</p>
     </div>
 
     <div class="services-grid gsap-stagger">
       <div class="service-card">
         <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></span>
         <h3>Weekly Pool Maintenance</h3>
-        <p>Consistent, scheduled cleaning that keeps your water crystal clear and your chemistry balanced — every single week.</p>
+        <p>Consistent, scheduled cleaning that keeps your water crystal clear and your chemistry balanced, every single week.</p>
         <a href="services.html#weekly" class="service-learn">Learn more →</a>
       </div>
       <div class="service-card">
         <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
         <h3>Equipment Repair</h3>
-        <p>Pumps, heaters, chlorine feeders, sand filters — we service all major brands and offer free estimates on every job.</p>
+        <p>Pumps, heaters, chlorine feeders, sand filters: we service all major brands and offer free estimates on every job.</p>
         <a href="services.html#repair" class="service-learn">Learn more →</a>
       </div>
       <div class="service-card">
@@ -611,13 +618,13 @@
       <div class="service-card">
         <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
         <h3>Hot Tub &amp; Spa Service</h3>
-        <p>Full maintenance and repair for hot tubs and spas. Same reliable service you expect from Demo Pool Co..</p>
+        <p>Full maintenance and repair for hot tubs and spas. Same reliable service you expect from Diamond D.</p>
         <a href="services.html#spa" class="service-learn">Learn more →</a>
       </div>
       <div class="service-card">
         <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
         <h3>Pool School</h3>
-        <p>Our signature service — we teach you how to operate and maintain your pool yourself. Knowledge nobody else offers.</p>
+        <p>Our signature service: we teach you how to operate and maintain your pool yourself. Knowledge nobody else offers.</p>
         <a href="services.html#school" class="service-learn">Learn more →</a>
       </div>
     </div>
@@ -629,10 +636,9 @@
 </section>
 
 <!-- ── WHY DIAMOND D ── -->
-<section class="section why-section" aria-label="Why choose Demo Pool Co.">
+<section class="section why-section" aria-label="Why choose Diamond D Pool Services">
   <div class="container">
     <div class="text-center gsap-fade-up">
-      <span class="section-label section-label-dark">Why Choose Us</span>
       <h2>Service With a Smile,<br><em class="serif-italic">Trust You Can Feel</em></h2>
     </div>
 
@@ -640,17 +646,17 @@
       <div class="why-item">
         <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
         <h3>Fast &amp; Reliable</h3>
-        <p>We show up on time, every time. When you call or text, We answer — not a call center in another state.</p>
+        <p>We show up on time, every time. When you call or text, we answer, not a call center in another state.</p>
       </div>
       <div class="why-item">
         <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
         <h3>Local &amp; Personal</h3>
-        <p>We're your neighbors. Locally owned, serving Austin and Central Texas. We care about our community because we live here too.</p>
+        <p>We're your neighbors. Locally owned, serving Jacksonville, Palestine, and East Texas. We care about this community because we live here too.</p>
       </div>
       <div class="why-item">
         <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
-        <h3>Pool School — Unique to Us</h3>
-        <p>No other pool company in Central Texas offers this. We teach you how your pool works so you're never in the dark about your equipment.</p>
+        <h3>Pool School: Unique to Us</h3>
+        <p>No other pool company in East Texas offers this. We teach you how your pool works so you're never in the dark about your equipment.</p>
       </div>
     </div>
   </div>
@@ -660,9 +666,8 @@
 <section class="section testimonials-section" id="reviews" aria-label="Customer reviews">
   <div class="container">
     <div class="text-center gsap-fade-up">
-      <span class="section-label">What Customers Say</span>
       <h2>Real People, Real Results</h2>
-      <p class="mt-16" style="max-width:480px;margin-left:auto;margin-right:auto">Don't take our word for it — here's what Central Texas pool owners say about Demo Pool Co..</p>
+      <p class="mt-16" style="max-width:480px;margin-left:auto;margin-right:auto">Don't take our word for it. Here's what East Texas pool owners say about Diamond D Pool Services.</p>
       <!-- Aggregate rating -->
       <div class="reviews-aggregate">
         <div class="reviews-stars-row">
@@ -692,29 +697,11 @@
         <p class="t-text">our team has been taking care of our pool for over a year now. Shows up every week, no excuses. Our water has never looked better. Couldn't recommend him more.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFE8D6"/><stop offset="100%" stop-color="#FFBF9E"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av1)"/>
-              <!-- body -->
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#0fa8b5"/>
-              <!-- neck -->
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#F5C5A3"/>
-              <!-- head -->
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F5C5A3"/>
-              <!-- hair back -->
-              <ellipse cx="26" cy="20" rx="13" ry="12" fill="#D4A062"/>
-              <!-- head front -->
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F5C5A3"/>
-              <!-- hair top -->
-              <path d="M15 22 Q14 10 26 10 Q38 10 37 22 Q35 14 26 14 Q17 14 15 22Z" fill="#D4A062"/>
-              <!-- hair sides long -->
-              <path d="M15 22 Q13 34 15 40 Q17 38 18 34 Q16 28 17 22Z" fill="#D4A062"/>
-              <path d="M37 22 Q39 34 37 40 Q35 38 34 34 Q36 28 35 22Z" fill="#D4A062"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">Sarah M.</div>
-            <div class="t-location">Austin, TX</div>
+            <div class="t-location">Jacksonville, TX</div>
           </div>
           <div class="t-verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -735,21 +722,11 @@
         <p class="t-text">My pump went out on a Friday afternoon. Our tech was there by Saturday morning with a fix and a fair price. Free estimate, no surprises on the bill. That's rare these days.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D1E8FF"/><stop offset="100%" stop-color="#5B96D9"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av2)"/>
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#0d2b4e"/>
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#E8C09A"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#E8C09A"/>
-              <!-- short dark hair -->
-              <ellipse cx="26" cy="18" rx="12" ry="8" fill="#2c1a0e"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#E8C09A"/>
-              <path d="M15 22 Q14 12 26 12 Q38 12 37 22 Q36 16 26 16 Q16 16 15 22Z" fill="#2c1a0e"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James T." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">James T.</div>
-            <div class="t-location">Austin, TX</div>
+            <div class="t-location">Palestine, TX</div>
           </div>
           <div class="t-verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -767,26 +744,14 @@
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="t-text">The Pool School service is something else. I actually understand my pool now. Our tech walked me through everything — chemicals, filter, pump schedule. Worth every penny.</p>
+        <p class="t-text">The Pool School service is something else. I actually understand my pool now. Our tech walked me through everything: chemicals, filter, pump schedule. Worth every penny.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D8F0DC"/><stop offset="100%" stop-color="#6DBF82"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av3)"/>
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#2d6a4f"/>
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#F5D5B0"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F5D5B0"/>
-              <!-- auburn/wavy hair -->
-              <ellipse cx="26" cy="18" rx="13" ry="11" fill="#8B3A1A"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F5D5B0"/>
-              <path d="M14 20 Q13 10 26 10 Q39 10 38 20 Q36 14 26 14 Q16 14 14 20Z" fill="#8B3A1A"/>
-              <path d="M14 20 Q12 30 14 38 Q16 40 17 36 Q15 28 16 20Z" fill="#8B3A1A"/>
-              <path d="M38 20 Q40 30 38 38 Q36 40 35 36 Q37 28 36 20Z" fill="#8B3A1A"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Robin H." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">Robin H.</div>
-            <div class="t-location">Travis County, TX</div>
+            <div class="t-location">Cherokee County, TX</div>
           </div>
           <div class="t-verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -804,24 +769,14 @@
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="t-text">Had green water for two weeks trying to fix it myself. One call to Demo Pool Co. and it was crystal clear in 48 hours. Should've called sooner. Trust me on this one.</p>
+        <p class="t-text">Had green water for two weeks trying to fix it myself. One call to Diamond D and it was crystal clear in 48 hours. Should've called sooner. Trust me on this one.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF3CD"/><stop offset="100%" stop-color="#F0A030"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av4)"/>
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#7b4f00"/>
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#C68642"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#C68642"/>
-              <!-- close-cut dark hair -->
-              <ellipse cx="26" cy="17" rx="11" ry="6" fill="#1a0a00"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#C68642"/>
-              <path d="M15 22 Q15 14 26 13 Q37 14 37 22 Q35 16 26 16 Q17 16 15 22Z" fill="#1a0a00"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Kevin B." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">Kevin B.</div>
-            <div class="t-location">Central Texas</div>
+            <div class="t-location">Rusk, TX</div>
           </div>
           <div class="t-verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -839,26 +794,14 @@
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="t-text">We have an above-ground pool — most companies won't touch it. Our team treats it exactly the same. Professional service, honest pricing, genuinely nice guy.</p>
+        <p class="t-text">We have an above-ground pool. Most companies won't touch it. Our team treats it exactly the same: professional service, honest pricing, genuinely nice people.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EAD5FF"/><stop offset="100%" stop-color="#A87FD4"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av5)"/>
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#6a3d9a"/>
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#F0DBCA"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F0DBCA"/>
-              <!-- light bob haircut -->
-              <ellipse cx="26" cy="20" rx="13" ry="11" fill="#C8B06A"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#F0DBCA"/>
-              <path d="M14 22 Q13 11 26 11 Q39 11 38 22 Q36 15 26 15 Q16 15 14 22Z" fill="#C8B06A"/>
-              <path d="M14 22 Q13 30 15 36 Q17 34 17 28 Q16 24 15 22Z" fill="#C8B06A"/>
-              <path d="M38 22 Q39 30 37 36 Q35 34 35 28 Q36 24 37 22Z" fill="#C8B06A"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Lisa &amp; Mark W." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">Lisa &amp; Mark W.</div>
-            <div class="t-location">Austin, TX</div>
+            <div class="t-location">Jacksonville, TX</div>
           </div>
           <div class="t-verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -876,20 +819,10 @@
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="t-text">Called three pool companies before Demo Pool Co.. Demo Pool Co. was the only one who actually answered the phone and gave me a real estimate same day. That kind of service matters.</p>
+        <p class="t-text">Called three pool companies before Diamond D. They were the only one who actually answered the phone and gave me a real estimate same day. That kind of service matters.</p>
         <div class="t-author">
           <div class="t-avatar">
-            <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="av6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#CCF5F8"/><stop offset="100%" stop-color="#0fa8b5"/></linearGradient></defs>
-              <circle cx="26" cy="26" r="26" fill="url(#av6)"/>
-              <ellipse cx="26" cy="54" rx="18" ry="12" fill="#064d52"/>
-              <rect x="22" y="36" width="8" height="8" rx="3" fill="#E0C8B0"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#E0C8B0"/>
-              <!-- silver/gray short hair -->
-              <ellipse cx="26" cy="17" rx="12" ry="7" fill="#9E9E9E"/>
-              <ellipse cx="26" cy="26" rx="11" ry="12" fill="#E0C8B0"/>
-              <path d="M15 22 Q14 13 26 13 Q38 13 37 22 Q35 16 26 16 Q17 16 15 22Z" fill="#9E9E9E"/>
-            </svg>
+            <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Dennis F." width="52" height="52" loading="lazy">
           </div>
           <div class="t-author-info">
             <div class="t-name">Dennis F.</div>
@@ -914,7 +847,7 @@
       <div class="gsap-slide-left">
         <span class="section-label section-label-dark">Free Estimate</span>
         <h2 style="color:white;margin-bottom:16px">Ready to Get<br><em class="serif-italic" style="color:var(--teal)">Started?</em></h2>
-        <p style="font-size:16px;margin-bottom:32px">Drop us a message and we'll get back to you the same day. Or skip the form — just call or text us directly.</p>
+        <p style="font-size:16px;margin-bottom:32px">Drop us a message and we'll get back to you the same day. Or skip the form and call or text us directly.</p>
         <div class="contact-cards">
           <a href="tel:5550000000" class="contact-card">
             <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
@@ -967,7 +900,7 @@
               <option>Water Testing &amp; Chemicals</option>
               <option>Hot Tub / Spa Service</option>
               <option>Pool School</option>
-              <option>Not sure — need advice</option>
+              <option>Not sure, need advice</option>
             </select>
           </div>
           <div class="form-group">
@@ -1001,9 +934,8 @@
 <section class="cta-section" aria-label="Call to action">
   <div class="container">
     <div class="gsap-fade-up">
-      <p class="section-label">Ready to get started?</p>
       <h2>Your Pool Should Be the<br><em class="serif-italic">Best Part of Your Backyard</em></h2>
-      <p>Stop stressing about green water and broken pumps.<br>Let us handle it — so you can just enjoy it.</p>
+      <p>Stop stressing about green water and broken pumps.<br>Let us handle it, so you can just enjoy it.</p>
       <div class="cta-actions">
         <a href="#estimate" class="btn btn-primary">Get a Free Estimate</a>
         <a href="tel:5550000000" class="btn btn-outline">Call 555-000-0000</a>
@@ -1017,9 +949,9 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo-mark">Demo Pool</div>
-        <div class="footer-logo-sub">Pool Services</div>
-        <p>Professional pool cleaning, maintenance, and repair for Austin TX and all of Central Texas. Locally owned, personally operated.</p>
+        <div class="footer-logo-mark">Diamond D Pools</div>
+        <div class="footer-logo-sub">East Texas</div>
+        <p>Professional pool cleaning, maintenance, and repair for Jacksonville, Palestine, and East Texas. Locally owned, personally operated.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/profile.php?id=100089122808095" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demo Pool Co. on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         </div>
@@ -1045,14 +977,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2025 Demo Pool Co. — Austin, TX · <a href="tel:5550000000" style="color:inherit">555-000-0000</a></div>
+      <div class="footer-copy">© 2025 Diamond D Pool Services · Jacksonville, TX · <a href="tel:5550000000" style="color:inherit">555-000-0000</a></div>
       <div class="footer-cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured · Free Estimates</div>
     </div>
   </div>
 </footer>
 
 <!-- Floating call button (mobile) -->
-<a href="tel:5550000000" class="float-call" aria-label="Call Demo Pool Co."><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+<a href="tel:5550000000" class="float-call" aria-label="Call Diamond D Pool Services"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 
 <!-- ── Scroll-driven hero ── -->
 <script>
@@ -1099,7 +1031,7 @@
     var img = imgs[idx];
     if (!img || !img.complete || !img.naturalWidth) return;
     var cw = canvas.width, ch = canvas.height;
-    ctx.fillStyle = '#060e18';
+    ctx.fillStyle = '#040e05';
     ctx.fillRect(0, 0, cw, ch);
     var ir = img.naturalWidth / img.naturalHeight;
     var cr = cw / ch;

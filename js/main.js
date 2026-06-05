@@ -1,7 +1,10 @@
 /* ============================================================
-   Demo Pool Co. — Main JS
+   Diamond D Pool Services — Main JS
    GSAP + ScrollTrigger animations
    ============================================================ */
+
+// Mark body so GSAP initial-state CSS activates only when JS is running
+document.body.classList.add('js-loaded');
 
 // ── GSAP ANIMATIONS ──────────────────────────────────────────
 gsap.registerPlugin(ScrollTrigger);
